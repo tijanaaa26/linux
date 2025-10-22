@@ -4,7 +4,7 @@
   "difficulty": "medium",
   "time": "75",
   "backend": {
-    "imageid": "ubuntu:22.04"
+    "imageid": "ubuntu"
   },
   "details": {
     "intro": {
