@@ -1,0 +1,38 @@
+{
+  "title": "Linux Troubleshooting Challenge",
+  "description": "10 practical system & networking tasks (osnovno → srednje).",
+  "difficulty": "medium",
+  "time": "75",
+  "backend": { "imageid": "ubuntu:22.04" },
+  "details": {
+    "intro": "step1.md",
+    "steps": [
+      { "title": "1) Permissions trap", "text": "step1.md", "verify": "verification/step1.sh" },
+      { "title": "2) Service fails on boot", "text": "step2.md", "verify": "verification/step2.sh" },
+      { "title": "3) Log mystery", "text": "step3.md", "verify": "verification/step3.sh" },
+      { "title": "4) Firewall vs connectivity", "text": "step4.md", "verify": "verification/step4.sh" },
+      { "title": "5) DNS confusion", "text": "step5.md", "verify": "verification/step5.sh" },
+      { "title": "6) Network bridge", "text": "step6.md", "verify": "verification/step6.sh" },
+      { "title": "7) Cron that doesn’t run", "text": "step7.md", "verify": "verification/step7.sh" },
+      { "title": "8) Disk usage trap", "text": "step8.md", "verify": "verification/step8.sh" },
+      { "title": "9) Network listener", "text": "step9.md", "verify": "verification/step9.sh" },
+      { "title": "10) Script logic puzzle", "text": "step10.md", "verify": "verification/step10.sh" }
+    ],
+    "finish": "finish.md"
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showide": false,
+    "terminals": [{ "name": "Terminal", "target": "host01" }]
+  },
+  "assets": {
+    "host01": [
+      {"file": "files/demoapp.sh", "target": "/opt/demoapp.sh"},
+      {"file": "files/demoapp.service.bad", "target": "/root/demoapp.service.bad"},
+      {"file": "files/nsswitch.conf.bad", "target": "/root/nsswitch.conf.bad"},
+      {"file": "files/web.local.hosts", "target": "/root/web.local.hosts"},
+      {"file": "files/backup.sh.sample", "target": "/root/backup.sh.sample"}
+    ]
+  },
+  "hooks": { "foreground": "foreground.sh" }
+}
